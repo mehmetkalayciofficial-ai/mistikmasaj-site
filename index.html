@@ -5,20 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mistik Masaj — Huzura Hoş Geldiniz</title>
   <meta name="description" content="Mistik Masaj — Profesyonel dokunuş, derin rahatlama. Balıkesir'de lüks masaj deneyimi.">
+  <meta name="theme-color" content="#1A0E2E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mistik Masaj — Huzura Hoş Geldiniz">
+  <meta property="og:description" content="Profesyonel dokunuş ve derin rahatlama. Balıkesir'de lüks masaj deneyimi.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.mistikmasaj.com">
+  <meta property="og:image" content="https://www.mistikmasaj.com/mistikmasaj-media/hero-bg.jpg">
+  <meta property="og:locale" content="tr_TR">
+  <!-- Schema.org Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "Mistik Masaj",
+    "description": "Profesyonel dokunuş ve derin rahatlama. Balıkesir'de lüks masaj deneyimi.",
+    "url": "https://www.mistikmasaj.com",
+    "telephone": "+905400190610",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gaziosmanpaşa Mah. 205. Sok. No:17/A",
+      "addressLocality": "Altıeylül/Balıkesir",
+      "addressRegion": "Balıkesir",
+      "addressCountry": "TR"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "10:00",
+        "closes": "22:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "12:00",
+        "closes": "20:00"
+      }
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="mistikmasaj-media/hero-bg.jpg">
   <link rel="preload" as="image" href="mistikmasaj-media/about-main.jpg">
   <link rel="preload" as="image" href="mistikmasaj-media/about-accent.jpg">
-  <link rel="preload" as="image" href="https://static.wixstatic.com/media/196ac9_827e5dd16e7f400aa05028993d69b2b0~mv2.webp">
-  <link rel="preload" as="image" href="https://static.wixstatic.com/media/11062b_091738f4467549ed9c91b7542a43f2db~mv2.jpg">
-  <link rel="preload" as="image" href="https://static.wixstatic.com/media/196ac9_74d4664b6da34f938b57633cdf1a0df3~mv2.jpg">
-  <link rel="preload" as="image" href="https://static.wixstatic.com/media/4ca4ab720b974bcf82660ffd64f47514.jpg">
-  <link rel="preload" as="image" href="https://static.wixstatic.com/media/11062b_dd8a0854f84e495a8e5d10f2b8c5f4ec~mv2.jpg">
-  <link rel="preload" as="image" href="https://static.wixstatic.com/media/11062b_7a41a3456f3f4898a20362605f2bb9ec~mv2.jpg">
-  <link rel="preload" as="image" href="https://static.wixstatic.com/media/11062b_182814f82f20496783ffeb600f54dbb4~mv2.jpeg">
-  <link rel="preload" as="image" href="https://static.wixstatic.com/media/11062b_813fb77531784479b999f3b30e30b90a~mv2.jpg">
+  <link rel="dns-prefetch" href="https://static.wixstatic.com">
   <link rel="preconnect" href="https://static.wixstatic.com" crossorigin>
   <style>
     /* ═══════════════════════════════════════
@@ -67,10 +102,12 @@
       opacity: 0;
       transform: translateY(40px);
       transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
     }
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
+      will-change: auto;
     }
     .reveal-delay-1 { transition-delay: 0.15s; }
     .reveal-delay-2 { transition-delay: 0.3s; }
@@ -90,9 +127,9 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: linear-gradient(180deg, rgba(26, 14, 46, 0.7) 0%, transparent 100%);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
+      background: linear-gradient(180deg, rgba(26, 14, 46, 0.85) 0%, rgba(26, 14, 46, 0.4) 60%, transparent 100%);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       transition: all 0.5s ease;
     }
     .navbar::after {
@@ -131,9 +168,10 @@
       font-family: var(--font-display);
       font-size: 1.4rem;
       font-weight: 600;
-      color: var(--gold);
+      color: var(--gold-light);
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      text-shadow: 0 0 12px rgba(212, 175, 55, 0.5), 0 1px 3px rgba(0, 0, 0, 0.6);
     }
     .nav-links {
       display: flex;
@@ -214,6 +252,7 @@
       animation: heroZoom 20s ease-in-out infinite alternate;
       opacity: 0;
       transition: opacity 0.8s ease;
+      will-change: transform;
     }
     .hero-bg img.loaded { opacity: 1; }
     @keyframes heroZoom {
@@ -245,6 +284,8 @@
       border-radius: 50%;
       animation: floatParticle linear infinite;
       opacity: 0;
+      will-change: transform, opacity;
+      contain: strict;
     }
 
     @keyframes floatParticle {
@@ -1210,10 +1251,10 @@
     <div class="about-grid">
       <div class="about-images reveal">
         <div class="about-img-main">
-          <img loading="eager" src="mistikmasaj-media/about-main.jpg" alt="Mistik Masaj Resepsiyon">
+          <img loading="lazy" src="mistikmasaj-media/about-main.jpg" alt="Mistik Masaj Resepsiyon">
         </div>
         <div class="about-img-accent">
-          <img loading="eager" src="mistikmasaj-media/about-accent.jpg" alt="Mistik Masaj Lobi">
+          <img loading="lazy" src="mistikmasaj-media/about-accent.jpg" alt="Mistik Masaj Lobi">
         </div>
       </div>
       <div class="about-text">
@@ -1291,7 +1332,7 @@
     </div>
     <div class="services-grid full-grid">
       <div class="service-card reveal">
-        <img loading="eager" src="https://static.wixstatic.com/media/196ac9_827e5dd16e7f400aa05028993d69b2b0~mv2.webp" alt="Klasik İsveç Masajı">
+        <img loading="lazy" src="https://static.wixstatic.com/media/196ac9_827e5dd16e7f400aa05028993d69b2b0~mv2.webp" alt="Klasik İsveç Masajı">
         <div class="service-overlay">
           <span class="service-number">01</span>
           <div class="service-line"></div>
@@ -1300,7 +1341,7 @@
         </div>
       </div>
       <div class="service-card reveal reveal-delay-1">
-        <img loading="eager" src="https://static.wixstatic.com/media/11062b_091738f4467549ed9c91b7542a43f2db~mv2.jpg" alt="Antistress Masajı">
+        <img loading="lazy" src="https://static.wixstatic.com/media/11062b_091738f4467549ed9c91b7542a43f2db~mv2.jpg" alt="Antistress Masajı">
         <div class="service-overlay">
           <span class="service-number">02</span>
           <div class="service-line"></div>
@@ -1309,7 +1350,7 @@
         </div>
       </div>
       <div class="service-card reveal reveal-delay-2">
-        <img loading="eager" src="https://static.wixstatic.com/media/196ac9_74d4664b6da34f938b57633cdf1a0df3~mv2.jpg" alt="Medikal Masaj">
+        <img loading="lazy" src="https://static.wixstatic.com/media/196ac9_74d4664b6da34f938b57633cdf1a0df3~mv2.jpg" alt="Medikal Masaj">
         <div class="service-overlay">
           <span class="service-number">03</span>
           <div class="service-line"></div>
@@ -1318,7 +1359,7 @@
         </div>
       </div>
       <div class="service-card reveal reveal-delay-3">
-        <img loading="eager" src="https://static.wixstatic.com/media/4ca4ab720b974bcf82660ffd64f47514.jpg" alt="Aromaterapi Masajı">
+        <img loading="lazy" src="https://static.wixstatic.com/media/4ca4ab720b974bcf82660ffd64f47514.jpg" alt="Aromaterapi Masajı">
         <div class="service-overlay">
           <span class="service-number">04</span>
           <div class="service-line"></div>
@@ -1327,7 +1368,7 @@
         </div>
       </div>
       <div class="service-card reveal">
-        <img loading="eager" src="https://static.wixstatic.com/media/11062b_dd8a0854f84e495a8e5d10f2b8c5f4ec~mv2.jpg" alt="Boyun Masajı">
+        <img loading="lazy" src="https://static.wixstatic.com/media/11062b_dd8a0854f84e495a8e5d10f2b8c5f4ec~mv2.jpg" alt="Boyun Masajı">
         <div class="service-overlay">
           <span class="service-number">05</span>
           <div class="service-line"></div>
@@ -1336,7 +1377,7 @@
         </div>
       </div>
       <div class="service-card reveal reveal-delay-1">
-        <img loading="eager" src="https://static.wixstatic.com/media/11062b_7a41a3456f3f4898a20362605f2bb9ec~mv2.jpg" alt="Sırt ve Bel Masajı">
+        <img loading="lazy" src="https://static.wixstatic.com/media/11062b_7a41a3456f3f4898a20362605f2bb9ec~mv2.jpg" alt="Sırt ve Bel Masajı">
         <div class="service-overlay">
           <span class="service-number">06</span>
           <div class="service-line"></div>
@@ -1345,7 +1386,7 @@
         </div>
       </div>
       <div class="service-card reveal reveal-delay-2">
-        <img loading="eager" src="https://static.wixstatic.com/media/11062b_182814f82f20496783ffeb600f54dbb4~mv2.jpeg" alt="Spor Masajı">
+        <img loading="lazy" src="https://static.wixstatic.com/media/11062b_182814f82f20496783ffeb600f54dbb4~mv2.jpeg" alt="Spor Masajı">
         <div class="service-overlay">
           <span class="service-number">07</span>
           <div class="service-line"></div>
@@ -1354,7 +1395,7 @@
         </div>
       </div>
       <div class="service-card reveal reveal-delay-3">
-        <img loading="eager" src="https://static.wixstatic.com/media/11062b_813fb77531784479b999f3b30e30b90a~mv2.jpg" alt="Ayak Masajı">
+        <img loading="lazy" src="https://static.wixstatic.com/media/11062b_813fb77531784479b999f3b30e30b90a~mv2.jpg" alt="Ayak Masajı">
         <div class="service-overlay">
           <span class="service-number">08</span>
           <div class="service-line"></div>
@@ -1368,16 +1409,16 @@
   <!-- ═══════════ GALLERY STRIP ═══════════ -->
   <div class="gallery-strip">
     <div class="gallery-item">
-      <img loading="eager" src="mistikmasaj-media/gallery-1.jpg" alt="Mistik Masaj Dış Cephe">
+      <img loading="lazy" src="mistikmasaj-media/gallery-1.jpg" alt="Mistik Masaj Dış Cephe">
     </div>
     <div class="gallery-item">
-      <img loading="eager" src="mistikmasaj-media/gallery-2.jpg" alt="Mistik Masaj İç Mekan Logo">
+      <img loading="lazy" src="mistikmasaj-media/gallery-2.jpg" alt="Mistik Masaj İç Mekan Logo">
     </div>
     <div class="gallery-item">
-      <img loading="eager" src="mistikmasaj-media/gallery-3.jpg" alt="Mistik Masaj Koridor">
+      <img loading="lazy" src="mistikmasaj-media/gallery-3.jpg" alt="Mistik Masaj Koridor">
     </div>
     <div class="gallery-item">
-      <img loading="eager" src="mistikmasaj-media/gallery-4.jpg" alt="Mistik Masaj Lobi">
+      <img loading="lazy" src="mistikmasaj-media/gallery-4.jpg" alt="Mistik Masaj Lobi">
     </div>
   </div>
 
@@ -1453,7 +1494,7 @@
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <img loading="eager" src="mistikmasaj-media/Kendinize (3).png" alt="Mistik Masaj">
+        <img loading="lazy" src="mistikmasaj-media/Kendinize (3).png" alt="Mistik Masaj">
         <span>Mistik Masaj</span>
       </div>
       <ul class="footer-links">
@@ -1468,11 +1509,18 @@
 
   <!-- ═══════════ JAVASCRIPT ═══════════ -->
   <script>
-    // Navbar scroll effect
+    // Navbar scroll effect — throttled with rAF
     const navbar = document.getElementById('navbar');
+    let ticking = false;
     window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 60);
-    });
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          navbar.classList.toggle('scrolled', window.scrollY > 60);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
 
     // Mobile menu toggle
     const menuToggle = document.getElementById('menuToggle');
@@ -1481,15 +1529,14 @@
       menuToggle.classList.toggle('active');
       navLinks.classList.toggle('open');
     });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
+    navLinks.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') {
         menuToggle.classList.remove('active');
         navLinks.classList.remove('open');
-      });
+      }
     });
 
     // Scroll reveal with IntersectionObserver
-    const revealEls = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1498,34 +1545,30 @@
         }
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-    revealEls.forEach(el => revealObserver.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    // Floating particles — more visible, start earlier
+    // Floating particles — reduced count, built via fragment
     const particlesContainer = document.getElementById('heroParticles');
-    for (let i = 0; i < 35; i++) {
+    const fragment = document.createDocumentFragment();
+    for (let i = 0; i < 18; i++) {
       const particle = document.createElement('div');
       particle.classList.add('particle');
-      particle.style.left = Math.random() * 100 + '%';
       const size = (Math.random() * 4 + 2) + 'px';
-      particle.style.width = size;
-      particle.style.height = size;
-      particle.style.animationDuration = (Math.random() * 8 + 8) + 's';
-      particle.style.animationDelay = (Math.random() * 5) + 's';
-      particle.style.boxShadow = `0 0 ${Math.random() * 6 + 3}px rgba(212, 175, 55, 0.6)`;
-      particlesContainer.appendChild(particle);
+      particle.style.cssText = `left:${Math.random()*100}%;width:${size};height:${size};animation-duration:${Math.random()*8+8}s;animation-delay:${Math.random()*5}s;box-shadow:0 0 ${Math.random()*6+3}px rgba(212,175,55,0.6)`;
+      fragment.appendChild(particle);
     }
+    particlesContainer.appendChild(fragment);
 
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          const offset = 80;
-          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-          window.scrollTo({ top, behavior: 'smooth' });
-        }
-      });
+    // Smooth scroll — single delegated listener
+    document.addEventListener('click', (e) => {
+      const anchor = e.target.closest('a[href^="#"]');
+      if (!anchor) return;
+      e.preventDefault();
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (target) {
+        const top = target.getBoundingClientRect().top + window.pageYOffset - 80;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
     });
   </script>
 
