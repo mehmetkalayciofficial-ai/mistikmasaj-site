@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mistik Masaj — Huzura Hoş Geldiniz</title>
+  <meta name="description" content="Mistik Masaj — Profesyonel dokunuş, derin rahatlama. Balıkesir'de lüks masaj deneyimi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://static.wixstatic.com/media/c837a6_aa7c239e685b4a9989f2ab7fbbeb106b~mv2.jpg">
+  <link rel="preload" as="image" href="https://static.wixstatic.com/media/c837a6_5f8500f411004d69a2c67293457f3181~mv2.jpg">
+  <link rel="preload" as="image" href="https://static.wixstatic.com/media/11062b_24cd01c075f84bc39d6b57682c49dda4~mv2.jpeg">
+  <link rel="preload" as="image" href="https://static.wixstatic.com/media/196ac9_827e5dd16e7f400aa05028993d69b2b0~mv2.webp">
+  <link rel="preload" as="image" href="https://static.wixstatic.com/media/11062b_091738f4467549ed9c91b7542a43f2db~mv2.jpg">
+  <link rel="preload" as="image" href="https://static.wixstatic.com/media/196ac9_74d4664b6da34f938b57633cdf1a0df3~mv2.jpg">
+  <link rel="preload" as="image" href="https://static.wixstatic.com/media/4ca4ab720b974bcf82660ffd64f47514.jpg">
+  <link rel="preload" as="image" href="https://static.wixstatic.com/media/11062b_dd8a0854f84e495a8e5d10f2b8c5f4ec~mv2.jpg">
+  <link rel="preload" as="image" href="https://static.wixstatic.com/media/11062b_7a41a3456f3f4898a20362605f2bb9ec~mv2.jpg">
+  <link rel="preload" as="image" href="https://static.wixstatic.com/media/11062b_182814f82f20496783ffeb600f54dbb4~mv2.jpeg">
+  <link rel="preload" as="image" href="https://static.wixstatic.com/media/11062b_813fb77531784479b999f3b30e30b90a~mv2.jpg">
+  <link rel="preconnect" href="https://static.wixstatic.com" crossorigin>
+  <style>
+    /* ═══════════════════════════════════════
+       CSS CUSTOM PROPERTIES
+       ═══════════════════════════════════════ */
+    :root {
+      --purple-deep: #1A0E2E;
+      --purple-dark: #2D1B4E;
+      --purple-mid: #4A2D7A;
+      --purple-soft: #6B3FA0;
+      --purple-light: #9B72CF;
+      --purple-mist: #C9B1E0;
+      --gold: #D4AF37;
+      --gold-light: #E8D48B;
+      --gold-pale: #F5E6B8;
+      --quartz: #F5F0EB;
+      --quartz-warm: #FBF7F2;
+      --quartz-pure: #FEFCF9;
+      --text-dark: #1A0E2E;
+      --text-body: #3D2B5A;
+      --text-muted: #7B6B94;
+      --font-display: 'Cormorant Garamond', 'Georgia', serif;
+      --font-body: 'Jost', 'Helvetica Neue', sans-serif;
+    }
+
+    /* ═══════════════════════════════════════
+       RESET & BASE
+       ═══════════════════════════════════════ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      font-family: var(--font-body);
+      font-weight: 300;
+      color: var(--text-body);
+      background: var(--quartz);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ═══════════════════════════════════════
+       SCROLL REVEAL ANIMATIONS
+       ═══════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.15s; }
+    .reveal-delay-2 { transition-delay: 0.3s; }
+    .reveal-delay-3 { transition-delay: 0.45s; }
+    .reveal-delay-4 { transition-delay: 0.6s; }
+
+    /* ═══════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════ */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(180deg, rgba(26, 14, 46, 0.7) 0%, transparent 100%);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      transition: all 0.5s ease;
+    }
+    .navbar::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 5%;
+      width: 90%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.25), transparent);
+      transition: opacity 0.5s ease;
+    }
+    .navbar.scrolled {
+      background: rgba(26, 14, 46, 0.95);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      padding: 0.7rem 3rem;
+      box-shadow: 0 4px 30px rgba(26, 14, 46, 0.4);
+    }
+    .navbar.scrolled::after {
+      opacity: 0.6;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .nav-logo img {
+      height: 55px;
+      width: auto;
+      transition: height 0.4s ease;
+      filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.7)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 6px rgba(255, 255, 255, 0.9));
+    }
+    .navbar.scrolled .nav-logo img { height: 40px; }
+    .nav-logo-text {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--quartz);
+      position: relative;
+      padding-bottom: 4px;
+      transition: color 0.3s ease;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
+
+    /* Mobile menu button */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+      z-index: 1001;
+    }
+    .menu-toggle span {
+      display: block;
+      width: 26px;
+      height: 1.5px;
+      background: var(--gold);
+      transition: all 0.4s ease;
+      transform-origin: center;
+    }
+    .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(4px, 5px); }
+    .menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(4px, -5px); }
+
+    /* ═══════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════ */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 700px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      filter: brightness(0.35) saturate(0.8);
+      transform: scale(1.05);
+      animation: heroZoom 20s ease-in-out infinite alternate;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+    .hero-bg img.loaded { opacity: 1; }
+    @keyframes heroZoom {
+      0% { transform: scale(1.05); }
+      100% { transform: scale(1.12); }
+    }
+    /* Gradient overlays for depth */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(26, 14, 46, 0.6) 0%, rgba(26, 14, 46, 0.1) 40%, rgba(26, 14, 46, 0.5) 100%),
+        radial-gradient(ellipse at 50% 80%, rgba(106, 63, 160, 0.25) 0%, transparent 60%);
+    }
+    /* Floating golden particles */
+    .hero-particles {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: radial-gradient(circle, var(--gold-light), transparent);
+      border-radius: 50%;
+      animation: floatParticle linear infinite;
+      opacity: 0;
+    }
+
+    @keyframes floatParticle {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      5% { opacity: 1; }
+      50% { opacity: 0.9; }
+      90% { opacity: 0.5; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 5rem 2rem 0;
+    }
+    .hero-logo {
+      width: 120px;
+      height: auto;
+      margin: 0 auto 1.5rem;
+      filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 50px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+      opacity: 0;
+      animation: fadeUp 1.2s 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .hero-ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 1.2s 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .hero-ornament .line {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .hero-ornament .diamond {
+      width: 8px;
+      height: 8px;
+      border: 1px solid var(--gold);
+      transform: rotate(45deg);
+    }
+    .hero-subtitle-top {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 1.2s 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 6rem);
+      font-weight: 300;
+      color: var(--quartz-pure);
+      line-height: 1.1;
+      letter-spacing: 0.04em;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 1.2s 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .hero-title em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--gold-light);
+    }
+    .hero-desc {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: rgba(245, 240, 235, 0.75);
+      max-width: 500px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+      letter-spacing: 0.02em;
+      opacity: 0;
+      animation: fadeUp 1.2s 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1rem 2.8rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      opacity: 0;
+      animation: fadeUp 1.2s 1.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      z-index: -1;
+    }
+    .hero-cta:hover {
+      color: var(--purple-deep);
+    }
+    .hero-cta:hover::before {
+      transform: scaleX(1);
+    }
+    .hero-cta svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      transition: transform 0.4s ease;
+    }
+    .hero-cta:hover svg { transform: translateX(4px); }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      opacity: 0;
+      animation: fadeUp 1s 2s ease forwards;
+    }
+    .scroll-indicator span {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(245, 240, 235, 0.4);
+    }
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(180deg, var(--gold), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ═══════════════════════════════════════
+       SECTION SPACING
+       ═══════════════════════════════════════ */
+    .section-padding {
+      padding: 7rem 2rem;
+    }
+
+    /* ═══════════════════════════════════════
+       MARQUEE STRIP
+       ═══════════════════════════════════════ */
+    .marquee-strip {
+      background: var(--purple-deep);
+      padding: 1.2rem 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .marquee-track {
+      display: flex;
+      gap: 3rem;
+      animation: marqueeScroll 30s linear infinite;
+      width: max-content;
+    }
+    .marquee-item {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+    .marquee-item::after {
+      content: '◆';
+      font-size: 0.45rem;
+      color: var(--purple-light);
+    }
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ═══════════════════════════════════════
+       ABOUT / BİZ KİMİZ SECTION
+       ═══════════════════════════════════════ */
+    .about {
+      position: relative;
+      background: var(--quartz-warm);
+      overflow: hidden;
+    }
+    .about::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(106, 63, 160, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .about-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-images {
+      position: relative;
+      height: 550px;
+    }
+    .about-img-main {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 75%;
+      height: 420px;
+      overflow: hidden;
+    }
+    .about-img-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .about-img-main:hover img { transform: scale(1.05); }
+    .about-img-accent {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 55%;
+      height: 280px;
+      overflow: hidden;
+      border: 6px solid var(--quartz-warm);
+      box-shadow: -10px -10px 40px rgba(26, 14, 46, 0.08);
+    }
+    .about-img-accent img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Gold corner accent */
+    .about-img-main::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: 60px;
+      height: 60px;
+      border-top: 2px solid var(--gold);
+      border-left: 2px solid var(--gold);
+      z-index: 2;
+    }
+    .about-text .section-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .section-label .label-line {
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .about-text h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      color: var(--text-dark);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    .about-text h2 em {
+      font-style: italic;
+      color: var(--purple-soft);
+    }
+    .about-text p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--text-body);
+      margin-bottom: 1.2rem;
+    }
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+    .about-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+    }
+    .about-feature .feat-icon {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--purple-deep), var(--purple-mid));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-feature .feat-icon svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--gold);
+      fill: none;
+    }
+    .about-feature span {
+      font-size: 0.88rem;
+      font-weight: 400;
+      color: var(--text-dark);
+      line-height: 1.4;
+      padding-top: 0.45rem;
+    }
+
+    /* ═══════════════════════════════════════
+       EXPERIENCE STRIP
+       ═══════════════════════════════════════ */
+    .experience {
+      background: var(--purple-deep);
+      position: relative;
+      overflow: hidden;
+    }
+    .experience::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(106, 63, 160, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 50%);
+    }
+    .experience-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .experience-text h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 300;
+      color: var(--quartz);
+      line-height: 1.25;
+      margin-bottom: 1.5rem;
+    }
+    .experience-text h2 span { color: var(--gold-light); }
+    .experience-text p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--purple-mist);
+      max-width: 460px;
+    }
+    .experience-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 2rem 1rem;
+      border: 1px solid rgba(212, 175, 55, 0.15);
+      position: relative;
+    }
+    .stat-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 2px;
+      background: var(--gold);
+    }
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--purple-mist);
+    }
+
+    /* ═══════════════════════════════════════
+       SERVICES / HİZMETLERİMİZ
+       ═══════════════════════════════════════ */
+    .services {
+      background: var(--quartz);
+      position: relative;
+    }
+    .services-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+    .services-header .section-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+    }
+    .services-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 400;
+      color: var(--text-dark);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .services-header p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+    .services-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    .services-grid.full-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .service-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 16/10;
+    }
+    .services-grid.full-grid .service-card {
+      aspect-ratio: 3/4;
+    }
+    .service-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease;
+      filter: brightness(0.55) saturate(0.85);
+    }
+    .service-card:hover img {
+      transform: scale(1.08);
+      filter: brightness(0.4) saturate(0.7);
+    }
+    .service-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+      background: linear-gradient(0deg, rgba(26, 14, 46, 0.85) 0%, rgba(26, 14, 46, 0.1) 60%);
+    }
+    .service-number {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      opacity: 0.7;
+    }
+    .service-name {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      font-weight: 500;
+      color: var(--quartz);
+      margin-bottom: 0.5rem;
+      transform: translateY(0);
+      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .service-desc {
+      font-size: 0.88rem;
+      color: var(--purple-mist);
+      line-height: 1.6;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease;
+    }
+    .service-card:hover .service-name {
+      transform: translateY(-8px);
+    }
+    .service-card:hover .service-desc {
+      max-height: 100px;
+      opacity: 1;
+    }
+    .service-line {
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 1rem;
+      transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .service-card:hover .service-line { width: 60px; }
+
+    /* ═══════════════════════════════════════
+       GALLERY STRIP
+       ═══════════════════════════════════════ */
+    .gallery-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    .gallery-item {
+      aspect-ratio: 1;
+      overflow: hidden;
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease, filter 0.5s ease;
+      filter: saturate(0.7);
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+      filter: saturate(1);
+    }
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(26, 14, 46, 0.2);
+      transition: opacity 0.5s ease;
+    }
+    .gallery-item:hover::after { opacity: 0; }
+
+    /* ═══════════════════════════════════════
+       CTA BANNER
+       ═══════════════════════════════════════ */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--purple-dark), var(--purple-deep));
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .cta-banner h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      color: var(--quartz);
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    .cta-banner h2 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+    .cta-banner p {
+      font-size: 1rem;
+      color: var(--purple-mist);
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+      position: relative;
+    }
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1rem 2.8rem;
+      background: var(--gold);
+      color: var(--purple-deep);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      position: relative;
+    }
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(212, 175, 55, 0.3);
+    }
+
+    /* ═══════════════════════════════════════
+       CONTACT / İLETİŞİM
+       ═══════════════════════════════════════ */
+    .contact {
+      background: var(--quartz-warm);
+      position: relative;
+    }
+    .contact-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+    .contact-info { }
+    .contact-info .section-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .contact-info h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      color: var(--text-dark);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .contact-info > p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .contact-detail .detail-icon {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      background: var(--purple-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-detail .detail-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--gold);
+      fill: none;
+    }
+    .contact-detail .detail-text h4 {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.3rem;
+    }
+    .contact-detail .detail-text p {
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      line-height: 1.5;
+    }
+    .contact-detail .detail-text a {
+      color: var(--text-dark);
+      transition: color 0.3s ease;
+    }
+    .contact-detail .detail-text a:hover { color: var(--gold); }
+    .contact-map {
+      position: relative;
+      overflow: hidden;
+      min-height: 400px;
+    }
+    .contact-map iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      border: none;
+      filter: saturate(0.6) brightness(0.9) contrast(1.1);
+      transition: filter 0.4s ease;
+    }
+    .contact-map:hover iframe { filter: saturate(0.8) brightness(0.95) contrast(1.05); }
+    .contact-map::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      width: 60px;
+      height: 60px;
+      border-top: 2px solid var(--gold);
+      border-right: 2px solid var(--gold);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* Working hours */
+    .working-hours {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(26, 14, 46, 0.08);
+    }
+    .working-hours h4 {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .hours-grid {
+      display: grid;
+      gap: 0.5rem;
+    }
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: var(--text-body);
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(26, 14, 46, 0.04);
+    }
+    .hours-row .day { font-weight: 400; }
+    .hours-row .time { color: var(--text-muted); }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════ */
+    footer {
+      background: var(--purple-deep);
+      padding: 3rem 2rem;
+      position: relative;
+    }
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .footer-brand img {
+      height: 40px;
+      filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 35px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+    }
+    .footer-brand span {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: var(--purple-mist);
+      letter-spacing: 0.05em;
+    }
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .footer-links a {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--purple-mist);
+      transition: color 0.3s ease;
+    }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* ═══════════════════════════════════════
+       MOBILE RESPONSIVE
+       ═══════════════════════════════════════ */
+    @media (max-width: 968px) {
+      .navbar { padding: 1rem 1.5rem; }
+      .navbar.scrolled { padding: 0.6rem 1.5rem; }
+      .menu-toggle { display: flex; }
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: rgba(26, 14, 46, 0.97);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .nav-links.open { right: 0; }
+      .nav-links a { font-size: 1rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .about-images { height: 400px; }
+      .experience-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .experience-stats { grid-template-columns: repeat(3, 1fr); }
+      .services-grid, .services-grid.full-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid.full-grid .service-card { aspect-ratio: 3/4; }
+      .service-card { aspect-ratio: 16/9; }
+      .gallery-strip { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
+      .footer-links { justify-content: center; }
+    }
+    @media (max-width: 600px) {
+      .section-padding { padding: 4rem 1.2rem; }
+      .about-images { height: 320px; }
+      .about-img-main { width: 80%; height: 300px; }
+      .about-img-accent { width: 55%; height: 200px; }
+      .about-features { grid-template-columns: 1fr; }
+      .services-grid.full-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid.full-grid .service-card { aspect-ratio: 3/5; }
+      .experience-stats { grid-template-columns: 1fr; }
+      .stat-item { padding: 1.5rem; }
+      .nav-logo-text { font-size: 1.1rem; }
+      .hero-title { font-size: 2.6rem; }
+      .contact-map { min-height: 300px; }
+      .contact-map iframe { min-height: 300px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════ NAVIGATION ═══════════ -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">
+      <img loading="eager" src="mistikmasaj-media/Kendinize (3).png" alt="Mistik Masaj Logo">
+      <span class="nav-logo-text">Mistik Masaj</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">Ana Sayfa</a></li>
+      <li><a href="#hakkimizda">Biz Kimiz?</a></li>
+      <li><a href="#hizmetler">Hizmetlerimiz</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img loading="eager" src="https://static.wixstatic.com/media/c837a6_aa7c239e685b4a9989f2ab7fbbeb106b~mv2.jpg" alt="Mistik Masaj Salonu" onload="this.classList.add('loaded')">
+    </div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-content">
+      <img loading="eager" src="mistikmasaj-media/Kendinize (3).png" alt="Mistik Masaj Logo" class="hero-logo">
+      <div class="hero-ornament">
+        <span class="line"></span>
+        <span class="diamond"></span>
+        <span class="line"></span>
+      </div>
+      <p class="hero-subtitle-top">Dingin Bir Mola</p>
+      <h1 class="hero-title">Huzura<br><em>Hoş Geldiniz</em></h1>
+      <p class="hero-desc">Profesyonel dokunuş ve derin rahatlama ile bedeninizi ve ruhunuzu yenileyin.</p>
+      <a href="#hizmetler" class="hero-cta">
+        Hizmetlerimiz
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="scroll-indicator">
+      <span>Keşfet</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ MARQUEE ═══════════ -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span class="marquee-item">Aromaterapi</span>
+      <span class="marquee-item">Sıcak Taş Masajı</span>
+      <span class="marquee-item">Derin Doku</span>
+      <span class="marquee-item">Cilt Bakımı</span>
+      <span class="marquee-item">Sırt Masajı</span>
+      <span class="marquee-item">Rahatlama</span>
+      <span class="marquee-item">Profesyonel Terapi</span>
+      <span class="marquee-item">Lüks Deneyim</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="marquee-item">Aromaterapi</span>
+      <span class="marquee-item">Sıcak Taş Masajı</span>
+      <span class="marquee-item">Derin Doku</span>
+      <span class="marquee-item">Cilt Bakımı</span>
+      <span class="marquee-item">Sırt Masajı</span>
+      <span class="marquee-item">Rahatlama</span>
+      <span class="marquee-item">Profesyonel Terapi</span>
+      <span class="marquee-item">Lüks Deneyim</span>
+    </div>
+  </div>
+
+  <!-- ═══════════ ABOUT ═══════════ -->
+  <section class="about section-padding" id="hakkimizda">
+    <div class="about-grid">
+      <div class="about-images reveal">
+        <div class="about-img-main">
+          <img loading="eager" src="https://static.wixstatic.com/media/c837a6_5f8500f411004d69a2c67293457f3181~mv2.jpg" alt="Mistik Masaj Terapist">
+        </div>
+        <div class="about-img-accent">
+          <img loading="eager" src="https://static.wixstatic.com/media/11062b_24cd01c075f84bc39d6b57682c49dda4~mv2.jpeg" alt="Masaj Yağı">
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          Biz Kimiz?
+        </div>
+        <h2 class="reveal reveal-delay-1">Profesyonel Dokunuş,<br><em>Derin Rahatlama</em></h2>
+        <p class="reveal reveal-delay-2">Uzman terapistlerimizin eşsiz teknikleriyle kaslarınızdaki gerginlikten kurtulun, kendinizi yenilenmiş hissedin. Mistik Masaj olarak, bedeninizin ve ruhunuzun ihtiyaç duyduğu huzuru sunmayı amaçlıyoruz.</p>
+        <p class="reveal reveal-delay-2">Sizi özel hissettirecek ambiyansımızla masaj deneyiminizi unutulmaz bir ritüele dönüştürüyoruz. Lüks ve konfor bir arada.</p>
+        <div class="about-features reveal reveal-delay-3">
+          <div class="about-feature">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/></svg>
+            </div>
+            <span>Uzman Terapistler</span>
+          </div>
+          <div class="about-feature">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg>
+            </div>
+            <span>Doğal Ürünler</span>
+          </div>
+          <div class="about-feature">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <span>Esnek Randevu</span>
+          </div>
+          <div class="about-feature">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <span>Hijyenik Ortam</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ EXPERIENCE STRIP ═══════════ -->
+  <section class="experience section-padding">
+    <div class="experience-inner">
+      <div class="experience-text reveal">
+        <h2><span>Lüks ve Konfor</span><br>Bir Arada</h2>
+        <p>Her detayı özenle tasarlanmış mekanımızda, günlük stresinizi geride bırakın ve kendinize mistik bir mola verin.</p>
+      </div>
+      <div class="experience-stats">
+        <div class="stat-item reveal">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Yıllık Deneyim</span>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+          <span class="stat-number">2K+</span>
+          <span class="stat-label">Mutlu Müşteri</span>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <span class="stat-number">8</span>
+          <span class="stat-label">Farklı Masaj</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SERVICES ═══════════ -->
+  <section class="services section-padding" id="hizmetler">
+    <div class="services-header">
+      <div class="section-label reveal">
+        <span class="label-line"></span>
+        Hizmetlerimiz
+        <span class="label-line"></span>
+      </div>
+      <h2 class="reveal reveal-delay-1">Bedeniniz İçin <em>Özel Bakım</em></h2>
+      <p class="reveal reveal-delay-2">Her biri uzman ellerle uygulanan masaj terapilerimizle tanışın.</p>
+    </div>
+    <div class="services-grid full-grid">
+      <div class="service-card reveal">
+        <img loading="eager" src="https://static.wixstatic.com/media/196ac9_827e5dd16e7f400aa05028993d69b2b0~mv2.webp" alt="Klasik İsveç Masajı">
+        <div class="service-overlay">
+          <span class="service-number">01</span>
+          <div class="service-line"></div>
+          <h3 class="service-name">Klasik İsveç Masajı</h3>
+          <p class="service-desc">Yumuşak ve ritmik hareketlerle tüm vücutta rahatlama sağlayan klasik masaj tekniği.</p>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <img loading="eager" src="https://static.wixstatic.com/media/11062b_091738f4467549ed9c91b7542a43f2db~mv2.jpg" alt="Antistress Masajı">
+        <div class="service-overlay">
+          <span class="service-number">02</span>
+          <div class="service-line"></div>
+          <h3 class="service-name">Antistress Masajı</h3>
+          <p class="service-desc">Günlük stresinizi geride bırakın, zihinsel ve bedensel huzura kavuşun.</p>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <img loading="eager" src="https://static.wixstatic.com/media/196ac9_74d4664b6da34f938b57633cdf1a0df3~mv2.jpg" alt="Medikal Masaj">
+        <div class="service-overlay">
+          <span class="service-number">03</span>
+          <div class="service-line"></div>
+          <h3 class="service-name">Medikal Masaj</h3>
+          <p class="service-desc">Kas ve eklem sorunlarına yönelik terapötik dokunuşla iyileşme sürecinizi hızlandırın.</p>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <img loading="eager" src="https://static.wixstatic.com/media/4ca4ab720b974bcf82660ffd64f47514.jpg" alt="Aromaterapi Masajı">
+        <div class="service-overlay">
+          <span class="service-number">04</span>
+          <div class="service-line"></div>
+          <h3 class="service-name">Aromaterapi Masajı</h3>
+          <p class="service-desc">Doğal bitkisel yağların eşliğinde hem bedeninizi hem ruhunuzu dinlendiren aromatik yolculuk.</p>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <img loading="eager" src="https://static.wixstatic.com/media/11062b_dd8a0854f84e495a8e5d10f2b8c5f4ec~mv2.jpg" alt="Boyun Masajı">
+        <div class="service-overlay">
+          <span class="service-number">05</span>
+          <div class="service-line"></div>
+          <h3 class="service-name">Boyun Masajı</h3>
+          <p class="service-desc">Boyun ve ense bölgesindeki gerginlikleri çözen odaklı rahatlama seansı.</p>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <img loading="eager" src="https://static.wixstatic.com/media/11062b_7a41a3456f3f4898a20362605f2bb9ec~mv2.jpg" alt="Sırt ve Bel Masajı">
+        <div class="service-overlay">
+          <span class="service-number">06</span>
+          <div class="service-line"></div>
+          <h3 class="service-name">Sırt ve Bel Masajı</h3>
+          <p class="service-desc">Sırt ve bel bölgesindeki ağrıları hedefleyen derin doku masaj tekniği.</p>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <img loading="eager" src="https://static.wixstatic.com/media/11062b_182814f82f20496783ffeb600f54dbb4~mv2.jpeg" alt="Spor Masajı">
+        <div class="service-overlay">
+          <span class="service-number">07</span>
+          <div class="service-line"></div>
+          <h3 class="service-name">Spor Masajı</h3>
+          <p class="service-desc">Spor sonrası kas yorgunluğunu giderin, performansınızı artırın.</p>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <img loading="eager" src="https://static.wixstatic.com/media/11062b_813fb77531784479b999f3b30e30b90a~mv2.jpg" alt="Ayak Masajı">
+        <div class="service-overlay">
+          <span class="service-number">08</span>
+          <div class="service-line"></div>
+          <h3 class="service-name">Ayak Masajı</h3>
+          <p class="service-desc">Refleksoloji teknikleriyle ayak bölgesinden tüm vücuda yayılan rahatlama.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ GALLERY STRIP ═══════════ -->
+  <div class="gallery-strip">
+    <div class="gallery-item">
+      <img loading="eager" src="https://static.wixstatic.com/media/11062b_24cd01c075f84bc39d6b57682c49dda4~mv2.jpeg" alt="Masaj Yağı">
+    </div>
+    <div class="gallery-item">
+      <img loading="eager" src="https://static.wixstatic.com/media/c837a6_106e74c6875341b0947cadd650b13921~mv2.jpg" alt="Masaj Salonu">
+    </div>
+    <div class="gallery-item">
+      <img loading="eager" src="https://static.wixstatic.com/media/11062b_374934a415cb4fd0b874d25842b66394~mv2.jpg" alt="Terapi Seansı">
+    </div>
+    <div class="gallery-item">
+      <img loading="eager" src="https://static.wixstatic.com/media/c837a6_5f8500f411004d69a2c67293457f3181~mv2.jpg" alt="Spa Ortamı">
+    </div>
+  </div>
+
+  <!-- ═══════════ CTA BANNER ═══════════ -->
+  <section class="cta-banner section-padding">
+    <h2 class="reveal">Kendinize <em>Mistik</em> Bir Mola Verin</h2>
+    <p class="reveal reveal-delay-1">Hemen randevu alın, uzman terapistlerimiz sizi bekliyor.</p>
+    <a href="tel:05400190610" class="btn-gold reveal reveal-delay-2">
+      Randevu Al
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    </a>
+  </section>
+
+  <!-- ═══════════ CONTACT ═══════════ -->
+  <section class="contact section-padding" id="iletisim">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-label reveal">
+          <span class="label-line"></span>
+          İletişim
+        </div>
+        <h2 class="reveal reveal-delay-1">Bize <em>Ulaşın</em></h2>
+        <p class="reveal reveal-delay-2">Sorularınız için bize ulaşabilir veya hemen randevunuzu oluşturabilirsiniz.</p>
+
+        <div class="contact-detail reveal">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="detail-text">
+            <h4>Adres</h4>
+            <p>Gaziosmanpaşa Mah. 205. Sok. No:17/A<br>Altıeylül/Balıkesir, Balıkesir</p>
+          </div>
+        </div>
+
+        <div class="contact-detail reveal reveal-delay-1">
+          <div class="detail-icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="detail-text">
+            <h4>Telefon</h4>
+            <p><a href="tel:05400190610">0540 019 06 10</a></p>
+          </div>
+        </div>
+
+        <div class="working-hours reveal reveal-delay-2">
+          <h4>Çalışma Saatleri</h4>
+          <div class="hours-grid">
+            <div class="hours-row">
+              <span class="day">Pazartesi — Cumartesi</span>
+              <span class="time">10:00 — 22:00</span>
+            </div>
+            <div class="hours-row">
+              <span class="day">Pazar</span>
+              <span class="time">12:00 — 20:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-map reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3088.5!2d27.8775!3d39.6484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDM4JzU0LjIiTiAyN8KwNTInMzkuMCJF!5e0!3m2!1str!2str!4v1"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mistik Masaj Konum">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img loading="eager" src="mistikmasaj-media/Kendinize (3).png" alt="Mistik Masaj">
+        <span>Mistik Masaj</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#hero">Ana Sayfa</a></li>
+        <li><a href="#hakkimizda">Biz Kimiz?</a></li>
+        <li><a href="#hizmetler">Hizmetler</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Mistik Masaj. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════ JAVASCRIPT ═══════════ -->
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // Scroll reveal with IntersectionObserver
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // Floating particles — more visible, start earlier
+    const particlesContainer = document.getElementById('heroParticles');
+    for (let i = 0; i < 35; i++) {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = Math.random() * 100 + '%';
+      const size = (Math.random() * 4 + 2) + 'px';
+      particle.style.width = size;
+      particle.style.height = size;
+      particle.style.animationDuration = (Math.random() * 8 + 8) + 's';
+      particle.style.animationDelay = (Math.random() * 5) + 's';
+      particle.style.boxShadow = `0 0 ${Math.random() * 6 + 3}px rgba(212, 175, 55, 0.6)`;
+      particlesContainer.appendChild(particle);
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
