@@ -53,8 +53,6 @@
   <link rel="preload" as="image" href="mistikmasaj-media/hero-bg.jpg">
   <link rel="preload" as="image" href="mistikmasaj-media/about-main.jpg">
   <link rel="preload" as="image" href="mistikmasaj-media/about-accent.jpg">
-  <link rel="dns-prefetch" href="https://static.wixstatic.com">
-  <link rel="preconnect" href="https://static.wixstatic.com" crossorigin>
   <style>
     /* ═══════════════════════════════════════
        CSS CUSTOM PROPERTIES
@@ -161,7 +159,6 @@
       height: 70px;
       width: auto;
       transition: height 0.4s ease;
-      filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.7));
     }
     .navbar.scrolled .nav-logo img { height: 50px; }
     .nav-logo-text {
@@ -298,10 +295,10 @@
       position: relative;
       z-index: 2;
       text-align: center;
-      padding: 5rem 2rem 6rem;
+      padding: 6rem 2rem 4rem;
     }
     .hero-logo {
-      width: 180px;
+      width: 100px;
       height: auto;
       margin: 0 auto 1.5rem;
       filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
@@ -411,15 +408,11 @@
 
     /* Scroll indicator */
     .scroll-indicator {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 0.6rem;
+      margin-top: 2rem;
       opacity: 0;
       animation: fadeUp 1s 2s ease forwards;
     }
@@ -1168,6 +1161,8 @@
       .stat-item { padding: 1.5rem; }
       .nav-logo-text { font-size: 1.1rem; }
       .hero-title { font-size: 2.6rem; }
+      .hero-logo { width: 90px; }
+      .scroll-line { height: 25px; }
       .contact-map { min-height: 300px; }
       .contact-map iframe { min-height: 300px; }
     }
@@ -1212,10 +1207,6 @@
         Hizmetlerimiz
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-    </div>
-    <div class="scroll-indicator">
-      <span>Keşfet</span>
-      <div class="scroll-line"></div>
     </div>
   </section>
 
@@ -1328,7 +1319,7 @@
     </div>
     <div class="services-grid full-grid">
       <div class="service-card reveal">
-        <img loading="lazy" src="https://static.wixstatic.com/media/196ac9_827e5dd16e7f400aa05028993d69b2b0~mv2.webp" alt="Klasik İsveç Masajı">
+        <img loading="lazy" src="mistikmasaj-media/service-01-klasik.webp" alt="Klasik İsveç Masajı">
         <div class="service-overlay">
           <span class="service-number">01</span>
           <div class="service-line"></div>
@@ -1337,7 +1328,7 @@
         </div>
       </div>
       <div class="service-card reveal reveal-delay-1">
-        <img loading="lazy" src="https://static.wixstatic.com/media/11062b_091738f4467549ed9c91b7542a43f2db~mv2.jpg" alt="Antistress Masajı">
+        <img loading="lazy" src="mistikmasaj-media/service-02-antistress.jpg" alt="Antistress Masajı">
         <div class="service-overlay">
           <span class="service-number">02</span>
           <div class="service-line"></div>
@@ -1346,7 +1337,7 @@
         </div>
       </div>
       <div class="service-card reveal reveal-delay-2">
-        <img loading="lazy" src="https://static.wixstatic.com/media/196ac9_74d4664b6da34f938b57633cdf1a0df3~mv2.jpg" alt="Medikal Masaj">
+        <img loading="lazy" src="mistikmasaj-media/service-03-medikal.jpg" alt="Medikal Masaj">
         <div class="service-overlay">
           <span class="service-number">03</span>
           <div class="service-line"></div>
@@ -1355,7 +1346,7 @@
         </div>
       </div>
       <div class="service-card reveal reveal-delay-3">
-        <img loading="lazy" src="https://static.wixstatic.com/media/4ca4ab720b974bcf82660ffd64f47514.jpg" alt="Aromaterapi Masajı">
+        <img loading="lazy" src="mistikmasaj-media/service-04-aromaterapi.jpg" alt="Aromaterapi Masajı">
         <div class="service-overlay">
           <span class="service-number">04</span>
           <div class="service-line"></div>
@@ -1364,7 +1355,7 @@
         </div>
       </div>
       <div class="service-card reveal">
-        <img loading="lazy" src="https://static.wixstatic.com/media/11062b_dd8a0854f84e495a8e5d10f2b8c5f4ec~mv2.jpg" alt="Boyun Masajı">
+        <img loading="lazy" src="mistikmasaj-media/service-05-boyun.jpg" alt="Boyun Masajı">
         <div class="service-overlay">
           <span class="service-number">05</span>
           <div class="service-line"></div>
@@ -1373,7 +1364,7 @@
         </div>
       </div>
       <div class="service-card reveal reveal-delay-1">
-        <img loading="lazy" src="https://static.wixstatic.com/media/11062b_7a41a3456f3f4898a20362605f2bb9ec~mv2.jpg" alt="Sırt ve Bel Masajı">
+        <img loading="lazy" src="mistikmasaj-media/service-06-sirt.jpg" alt="Sırt ve Bel Masajı">
         <div class="service-overlay">
           <span class="service-number">06</span>
           <div class="service-line"></div>
@@ -1382,7 +1373,7 @@
         </div>
       </div>
       <div class="service-card reveal reveal-delay-2">
-        <img loading="lazy" src="https://static.wixstatic.com/media/11062b_182814f82f20496783ffeb600f54dbb4~mv2.jpeg" alt="Spor Masajı">
+        <img loading="lazy" src="mistikmasaj-media/service-07-spor.jpg" alt="Spor Masajı">
         <div class="service-overlay">
           <span class="service-number">07</span>
           <div class="service-line"></div>
@@ -1391,7 +1382,7 @@
         </div>
       </div>
       <div class="service-card reveal reveal-delay-3">
-        <img loading="lazy" src="https://static.wixstatic.com/media/11062b_813fb77531784479b999f3b30e30b90a~mv2.jpg" alt="Ayak Masajı">
+        <img loading="lazy" src="mistikmasaj-media/service-08-ayak.jpg" alt="Ayak Masajı">
         <div class="service-overlay">
           <span class="service-number">08</span>
           <div class="service-line"></div>
