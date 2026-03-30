@@ -128,8 +128,8 @@
       align-items: center;
       justify-content: space-between;
       background: linear-gradient(180deg, rgba(26, 14, 46, 0.85) 0%, rgba(26, 14, 46, 0.4) 60%, transparent 100%);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       transition: all 0.5s ease;
     }
     .navbar::after {
@@ -161,7 +161,7 @@
       height: 70px;
       width: auto;
       transition: height 0.4s ease;
-      filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 8px rgba(255, 255, 255, 1));
+      filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.7));
     }
     .navbar.scrolled .nav-logo img { height: 50px; }
     .nav-logo-text {
@@ -249,10 +249,8 @@
       object-position: center 30%;
       filter: brightness(0.35) saturate(0.8);
       transform: scale(1.05);
-      animation: heroZoom 20s ease-in-out infinite alternate;
       opacity: 0;
       transition: opacity 0.8s ease;
-      will-change: transform;
     }
     .hero-bg img.loaded { opacity: 1; }
     @keyframes heroZoom {
@@ -303,10 +301,10 @@
       padding: 5rem 2rem 6rem;
     }
     .hero-logo {
-      width: 120px;
+      width: 180px;
       height: auto;
       margin: 0 auto 1.5rem;
-      filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 50px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+      filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
       opacity: 0;
       animation: fadeUp 1.2s 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     }
@@ -426,10 +424,10 @@
       animation: fadeUp 1s 2s ease forwards;
     }
     .scroll-indicator span {
-      font-size: 0.65rem;
+      font-size: 0.75rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: rgba(245, 240, 235, 0.4);
+      color: rgba(245, 240, 235, 0.7);
     }
     .scroll-line {
       width: 1px;
@@ -770,12 +768,11 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s ease;
+      transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
       filter: brightness(0.55) saturate(0.85);
     }
     .service-card:hover img {
       transform: scale(1.08);
-      filter: brightness(0.4) saturate(0.7);
     }
     .service-overlay {
       position: absolute;
@@ -848,12 +845,11 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.7s ease, filter 0.5s ease;
+      transition: transform 0.7s ease;
       filter: saturate(0.7);
     }
     .gallery-item:hover img {
       transform: scale(1.1);
-      filter: saturate(1);
     }
     .gallery-item::after {
       content: '';
@@ -1096,7 +1092,7 @@
     }
     .footer-brand img {
       height: 40px;
-      filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 35px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
     }
     .footer-brand span {
       font-family: var(--font-display);
@@ -1203,7 +1199,7 @@
     </div>
     <div class="hero-particles" id="heroParticles"></div>
     <div class="hero-content">
-      <img loading="eager" src="mistikmasaj-media/Kendinize (3).png" alt="Mistik Masaj Logo" class="hero-logo">
+      <img loading="eager" src="mistikmasaj-media/Kendinize (4).png" alt="Mistik Masaj Logo" class="hero-logo">
       <div class="hero-ornament">
         <span class="line"></span>
         <span class="diamond"></span>
@@ -1554,7 +1550,7 @@
       const particle = document.createElement('div');
       particle.classList.add('particle');
       const size = (Math.random() * 4 + 2) + 'px';
-      particle.style.cssText = `left:${Math.random()*100}%;width:${size};height:${size};animation-duration:${Math.random()*8+8}s;animation-delay:${Math.random()*5}s;box-shadow:0 0 ${Math.random()*6+3}px rgba(212,175,55,0.6)`;
+      particle.style.cssText = `left:${Math.random()*100}%;width:${size};height:${size};animation-duration:${Math.random()*8+8}s;animation-delay:${Math.random()*5}s`;
       fragment.appendChild(particle);
     }
     particlesContainer.appendChild(fragment);
